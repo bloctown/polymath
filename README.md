@@ -1,29 +1,13 @@
-# Polymath
+# Polymath (Dockerised)
 
 Polymath is a web server designed to host resource packs of the Oraxen plugin.
 
 ## How to use Polymath
 
 - Clone the project
-``git clone git@github.com:oraxen/Polymath`` or ``git clone https://github.com/oraxen/Polymath``
+``git clone git@github.com:bloctown/polymath``
 
-- Cd in the directory
-``cd ./Polymath``
+- Build the docker image
+``cd polymath && docker build . -t polymath``
 
-- Install the required libs
-On nixos: ``nix-shell``
-
-- Build polymath
-```sh
-./build.sh
-```
-
-- Run a first time
-``sh
-./run``
-
-- Configure the file ``polymath/config/settings.toml``
-
-- Run a second time
-``sh
-./run``
+- Run it either with `docker run` or by creating a docker-compose.yml. Remember to expose the port in `polymath/config/settings.toml`
